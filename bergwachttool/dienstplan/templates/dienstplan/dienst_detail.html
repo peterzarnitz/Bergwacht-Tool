@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
+
+{% if dienst %}
+<h1>Dienstplan - Eintrag Nr. {{ dienst.dienstnummer }}</h1>
+<ul>
+    <li>Dienstgebiet: {{ dienst.dienstgebiet.name }}</li>
+    <li>Dienstbeginn: {{ dienst.dienstbeginn }}</li>
+    <li>Dienstende: {{ dienst.dienstende }}</li>
+    <li>Dienstart: {{ dienst.art.name }}</li>
+    <li>Mitglieder:</li>
+    <li>Bemerkung: {{ dienst.bemerkung }}</li>
+</ul>
+{% else %}
+<p>Dienst nicht hinterlegt!</p>
+{% endif %}

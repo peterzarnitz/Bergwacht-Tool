@@ -13,7 +13,7 @@
     </tr>
     {% for dienst in dienst_list %}
     <tr>
-        <td><a href="/dienstplan/{{ dienst.dienstnummer }}/">{{ dienst.dienstnummer }}</a></td>
+        <td><a href="{% url 'dienstplan:dienst_detail' dienst.dienstnummer %}">{{ dienst.dienstnummer }}</a></td>
         <td>{{ dienst.dienstgebiet.name }}</td>
         <td>{{ dienst.dienstbeginn }}</td>
         <td>{{ dienst.dienstende }}</td>
@@ -23,5 +23,5 @@
     {% endfor %}
 </table>
 {% else %}
-<p>Keine aktuellen Dienste angelegt</p>
+<p>Keine aktuellen Dienste angelegt!</p>
 {% endif %}
