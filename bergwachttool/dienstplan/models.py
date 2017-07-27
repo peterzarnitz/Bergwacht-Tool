@@ -18,13 +18,31 @@ class Nutzer(models.Model):
     geb_datum = models.DateField(verbose_name='Geburtsdatum', null=True, blank=True)
     bw_eintritt = models.DateField(verbose_name='Bergwacht-Eintritt', null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = 'Nutzer'
+
+    def __str__(self):
+        return self.user.name
+
 
 class Dienstgebiet(models.Model):
     name = models.CharField(max_length=20, verbose_name='Name')
 
+    class Meta:
+        verbose_name_plural = 'Dienstgebiete'
+
+    def __str__(self):
+        return self.name
+
 
 class Dienstart(models.Model):
     name = models.CharField(max_length=40, verbose_name='Dienstart')
+
+    class Meta:
+        verbose_name_plural = 'Dienstarten'
+
+    def __str__(self):
+        return self.name
 
 
 class Dienst(models.Model):
@@ -34,6 +52,12 @@ class Dienst(models.Model):
     dienstende = models.DateTimeField(verbose_name='Dienstende')
     art = models.ForeignKey(Dienstart, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name_plural = 'Dienste'
+
+    def __str__(self):
+        return self.id
+
 
 @receiver(post_save, sender=User)
 def create_nutzer(sender, instance, created, **kwargs):
@@ -41,6 +65,6 @@ def create_nutzer(sender, instance, created, **kwargs):
         Nutzer.objects.create(user=instance)
 
 
-@receiver(post_save, sender=User)
-def save_nutzer(sender, instance, **kwargs):
-    instance.userprofile.save()
+    # @receiver(post_save, sender=User)
+    # def save_nutzer(sender, instance, **kwargs):
+    # instance.userprofile.save()
