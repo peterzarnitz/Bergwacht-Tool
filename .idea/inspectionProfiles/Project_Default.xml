@@ -22,6 +22,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="bergwachttool.dienstplan.models.Nutzer.objects" />
+          <option value="bergwachttool.dienstplan.models.Dienst.*" />
         </list>
       </option>
     </inspection_tool>
