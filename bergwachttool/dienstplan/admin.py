@@ -25,7 +25,7 @@ class NutzerUserAdmin(UserAdmin):
 
 admin.site.unregister(User)
 
-admin.site.register(User, Nutzer)
+admin.site.register(User, NutzerUserAdmin)
 admin.site.register(Dienstart)
 admin.site.register(Dienstgebiet)
 admin.site.register(Dienst)

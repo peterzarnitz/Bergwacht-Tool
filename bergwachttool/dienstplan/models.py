@@ -9,8 +9,6 @@ from django.dispatch import receiver
 
 class Nutzer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nachname = models.CharField(max_length=50, verbose_name='Nachname', null=True, blank=True)
-    vorname = models.CharField(max_length=50, verbose_name='Vorname', null=True, blank=True)
     handy = models.CharField(max_length=20, verbose_name='Handynummer', null=True, blank=True)
     adresse_strasse = models.CharField(max_length=100, verbose_name='Straße & Hnr.', null=True, blank=True)
     adresse_plz = models.CharField(max_length=6, verbose_name='PLZ', null=True, blank=True)
@@ -22,7 +20,7 @@ class Nutzer(models.Model):
         verbose_name_plural = 'Nutzer'
 
     def __str__(self):
-        return self.user.name
+        return self.user.username
 
 
 class Dienstgebiet(models.Model):
@@ -46,25 +44,21 @@ class Dienstart(models.Model):
 
 
 class Dienst(models.Model):
-    id = models.UUIDField(primary_key=True, verbose_name='Dienstnummer')
+    dienstnummer = models.AutoField(primary_key=True, verbose_name='Dienstnummer')
     dienstgebiet = models.ForeignKey(Dienstgebiet, on_delete=models.CASCADE)
     dienstbeginn = models.DateTimeField(verbose_name='Dienstbeginn')
     dienstende = models.DateTimeField(verbose_name='Dienstende')
     art = models.ForeignKey(Dienstart, on_delete=models.CASCADE)
+    bemerkung = models.TextField(max_length=500, verbose_name='Bemerkungen', blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'Dienste'
 
     def __str__(self):
-        return self.id
+        return str(self.dienstnummer)
 
 
 @receiver(post_save, sender=User)
 def create_nutzer(sender, instance, created, **kwargs):
     if created:
         Nutzer.objects.create(user=instance)
-
-
-    # @receiver(post_save, sender=User)
-    # def save_nutzer(sender, instance, **kwargs):
-    # instance.userprofile.save()
