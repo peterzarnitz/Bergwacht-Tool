@@ -2,15 +2,20 @@
   <dictionary name="Peter">
     <words>
       <w>adresse</w>
+      <w>bemerkungen</w>
       <w>bergwacht</w>
       <w>dienst</w>
       <w>dienstart</w>
       <w>dienstgebiet</w>
+      <w>dienstnummer</w>
       <w>eintritt</w>
       <w>inlines</w>
+      <w>mitglied</w>
       <w>nachname</w>
+      <w>nimmt</w>
       <w>nutzer</w>
       <w>strasse</w>
+      <w>teilan</w>
       <w>vorname</w>
     </words>
   </dictionary>

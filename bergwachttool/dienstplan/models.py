@@ -7,7 +7,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
-class Nutzer(models.Model):
+class Mitglied(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     handy = models.CharField(max_length=20, verbose_name='Handynummer', null=True, blank=True)
     adresse_strasse = models.CharField(max_length=100, verbose_name='Straße & Hnr.', null=True, blank=True)
@@ -17,10 +17,10 @@ class Nutzer(models.Model):
     bw_eintritt = models.DateField(verbose_name='Bergwacht-Eintritt', null=True, blank=True)
 
     class Meta:
-        verbose_name_plural = 'Nutzer'
+        verbose_name_plural = 'Mitglieder'
 
     def __str__(self):
-        return self.user.username
+        return self.user.last_name + ', ' + self.user.first_name
 
 
 class Dienstgebiet(models.Model):
@@ -50,6 +50,8 @@ class Dienst(models.Model):
     dienstende = models.DateTimeField(verbose_name='Dienstende')
     art = models.ForeignKey(Dienstart, on_delete=models.CASCADE)
     bemerkung = models.TextField(max_length=500, verbose_name='Bemerkungen', blank=True, null=True)
+    mitglieder = models.ManyToManyField(Mitglied, through='nimmtTeilanDienst',
+                                        through_fields=('dienstnummer', 'mitglied'), )
 
     class Meta:
         verbose_name_plural = 'Dienste'
@@ -58,7 +60,15 @@ class Dienst(models.Model):
         return str(self.dienstnummer)
 
 
+class nimmtTeilanDienst(models.Model):
+    dienstnummer = models.ForeignKey(Dienst, on_delete=models.CASCADE)
+    mitglied = models.ForeignKey(Mitglied, on_delete=models.CASCADE)
+    von = models.DateTimeField(verbose_name='Von')
+    bis = models.DateTimeField(verbose_name='Bis')
+    kommentar = models.TextField(verbose_name='Kommentar', max_length=200)
+
+
 @receiver(post_save, sender=User)
 def create_nutzer(sender, instance, created, **kwargs):
     if created:
-        Nutzer.objects.create(user=instance)
+        Mitglied.objects.create(user=instance)
