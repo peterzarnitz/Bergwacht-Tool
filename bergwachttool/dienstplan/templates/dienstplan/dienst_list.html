@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
+<h1>Dienstplan</h1>
+{% if dienst_list %}
+<table>
+    <tr>
+        <th>Nr.</th>
+        <th>Gebiet</th>
+        <th>Beginn</th>
+        <th>Ende</th>
+        <th>Art</th>
+        <th>Mitglieder</th>
+    </tr>
+    {% for dienst in dienst_list %}
+    <tr>
+        <td><a href="{% url 'dienstplan:dienst_detail' dienst.dienstnummer %}">{{ dienst.dienstnummer }}</a></td>
+        <td>{{ dienst.dienstgebiet.name }}</td>
+        <td>{{ dienst.dienstbeginn }}</td>
+        <td>{{ dienst.dienstende }}</td>
+        <td>{{ dienst.art.name }}</td>
+        <td> ----</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Keine aktuellen Dienste angelegt!</p>
+{% endif %}

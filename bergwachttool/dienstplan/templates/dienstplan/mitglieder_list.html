@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
+<h1>Mitgliederliste</h1>
+{% if mitglieder_list %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Geburtsdatum</th>
+        <th>Handynummer</th>
+        <th>E-Mail</th>
+        <th>Admin</th>
+    </tr>
+    {% for mitglied in mitglieder_list %}
+    <tr>
+        <td>{{ mitglied.user.last_name }}, {{ mitglied.user.first_name }}</td>
+        <td>{{ mitglied.geb_datum }}</td>
+        <td>{{ mitglied.handy }}</td>
+        <td><a href="mailto:{{ mitglied.user.email }}">{{ mitglied.user.email }}</a></td>
+        <td>{{ mitglied.user.isAdmin }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Keine Mitglieder angelegt!</p>
+{% endif %}

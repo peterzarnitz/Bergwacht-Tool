@@ -43,6 +43,20 @@ class Dienstart(models.Model):
         return self.name
 
 
+class Fahrzeug(models.Model):
+    kennzeichen = models.CharField(max_length=10, verbose_name='Kennzeichen')
+    bezeichnung = models.CharField(max_length=10, verbose_name='Bezeichnung')
+    typ = models.CharField(max_length=50, verbose_name='Typ')
+    standort = models.CharField(max_length=50, verbose_name='Standort')
+    naechsteHU = models.DateField(verbose_name='Naechste HU faellig am')
+
+    class Meta:
+        verbose_name_plural = 'Fahrzeuge'
+
+    def __str__(self):
+        return self.bezeichnung
+
+
 class Dienst(models.Model):
     dienstnummer = models.AutoField(primary_key=True, verbose_name='Dienstnummer')
     dienstgebiet = models.ForeignKey(Dienstgebiet, on_delete=models.CASCADE)
@@ -52,6 +66,7 @@ class Dienst(models.Model):
     bemerkung = models.TextField(max_length=500, verbose_name='Bemerkungen', blank=True, null=True)
     mitglieder = models.ManyToManyField(Mitglied, through='nimmtTeilanDienst',
                                         through_fields=('dienstnummer', 'mitglied'), )
+    fahrzeug = models.ForeignKey(Fahrzeug, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Dienste'
@@ -65,6 +80,7 @@ class nimmtTeilanDienst(models.Model):
     mitglied = models.ForeignKey(Mitglied, on_delete=models.CASCADE)
     von = models.DateTimeField(verbose_name='Von')
     bis = models.DateTimeField(verbose_name='Bis')
+    funktion = models.CharField(max_length=40, null=True)
     kommentar = models.TextField(verbose_name='Kommentar', max_length=200)
 
 
