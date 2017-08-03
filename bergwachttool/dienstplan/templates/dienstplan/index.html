@@ -1,9 +1,12 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
+{% extends 'base.html' %}
 
-<h1>Bergwacht Tool - Dienstplan</h1>
+{% block title %} Dienstplan {% endblock %}
+
+{% block content %}
+<h2>Dienstplan - Menü</h2>
 <ul>
     <li><a href="./dienst_overview/">Übersicht Dienstplan</a></li>
     <li><a href="./mitglieder_overview/">Übersicht Mitglieder</a>
     </li>
 </ul>
+{% endblock %}

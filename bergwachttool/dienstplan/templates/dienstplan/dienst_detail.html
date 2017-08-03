@@ -1,16 +1,38 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
+{% extends 'base.html' %}
 
 {% if dienst %}
-<h1>Dienstplan - Eintrag Nr. {{ dienst.dienstnummer }}</h1>
+{% block title %} Dienstplan - Eintrag Nr. {{ dienst.dienstnummer }} {% endblock %}
+
+{% block content %}
+<h2>Dienstplan - Eintrag Nr. {{ dienst.dienstnummer }}</h2>
 <ul>
     <li>Dienstgebiet: {{ dienst.dienstgebiet.name }}</li>
     <li>Dienstbeginn: {{ dienst.dienstbeginn }}</li>
     <li>Dienstende: {{ dienst.dienstende }}</li>
     <li>Dienstart: {{ dienst.art.name }}</li>
-    <li>Mitglieder:</li>
+    <li>Mitglieder:
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Funktion</th>
+                <th>Von - Bis</th>
+                <th>Bemerkung</th>
+            </tr>
+            {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
+            <tr>
+                <td>{{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}</td>
+                <td>{{ nimmtTeil.mitglied.get_status_display }}</td>
+                <td>{{ nimmtTeil.funktion }}</td>
+                <td>{{ nimmtTeil.von }} - {{ nimmtTeil.bis }}</td>
+                <td>{{ nimmtTeil.kommentar }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </li>
     <li>Bemerkung: {{ dienst.bemerkung }}</li>
 </ul>
+{% endblock %}
 {% else %}
 <p>Dienst nicht hinterlegt!</p>
 {% endif %}

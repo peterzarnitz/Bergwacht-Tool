@@ -1,15 +1,22 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
-<h1>Dienstplan</h1>
+{% extends 'base.html' %}
+
 {% if dienst_list %}
-<table>
+
+{% block title %} Dienstplan {% endblock %}
+
+{% block content %}
+<h2>Dienstplan</h2>
+<div class="table-responsive">
+    <table class="table">
     <tr>
         <th>Nr.</th>
         <th>Gebiet</th>
         <th>Beginn</th>
         <th>Ende</th>
         <th>Art</th>
-        <th>Mitglieder</th>
+        <th>Einsatzkräfte</th>
+        <th>Anwärter</th>
+        <th>Anmeldung</th>
     </tr>
     {% for dienst in dienst_list %}
     <tr>
@@ -18,10 +25,26 @@
         <td>{{ dienst.dienstbeginn }}</td>
         <td>{{ dienst.dienstende }}</td>
         <td>{{ dienst.art.name }}</td>
-        <td> ----</td>
+        <td> {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
+            {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAEK %}
+            {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }} ({{ nimmtTeil.funktion }})
+            <br>
+            {% endif %}
+            {% endfor %}
+        </td>
+        <td> {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
+            {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAnwaerter %}
+            {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }} ({{ nimmtTeil.funktion }})
+            <br>
+            {% endif %}
+            {% endfor %}
+        </td>
+        <td><a href="{% url 'dienstplan:dienst_anmeldung' dienst.dienstnummer %}" class="btn btn-primary" role="button">Anmelden</a>
     </tr>
     {% endfor %}
 </table>
+</div>
+{% endblock %}
 {% else %}
 <p>Keine aktuellen Dienste angelegt!</p>
 {% endif %}

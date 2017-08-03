@@ -4,14 +4,13 @@ from __future__ import unicode_literals
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import User, Mitglied, Dienst, Dienstgebiet, Dienstart, Fahrzeug
+from .models import User, Mitglied, Dienst, Dienstgebiet, Dienstart, Fahrzeug, nimmtTeilanDienst
 
 
 class ProfileInline(admin.StackedInline):
     model = Mitglied
     can_delete = False
     verbose_name_plural = 'Mitglied'
-    # fk_name = 'user'
 
 
 class MitgliedUserAdmin(UserAdmin):
@@ -30,3 +29,4 @@ admin.site.register(Dienstart)
 admin.site.register(Dienstgebiet)
 admin.site.register(Dienst)
 admin.site.register(Fahrzeug)
+admin.site.register(nimmtTeilanDienst)

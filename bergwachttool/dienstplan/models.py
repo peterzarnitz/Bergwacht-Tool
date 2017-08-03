@@ -6,6 +6,11 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+STATUS_CHOICES = (
+    ('AEK', 'Aktive Einsatzkraft'),
+    ('ANW', 'Anwaerter'),
+    ('NEK', 'Nicht-aktive Einsatzkraft'),
+)
 
 class Mitglied(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -15,12 +20,19 @@ class Mitglied(models.Model):
     adresse_ort = models.CharField(max_length=100, verbose_name='Stadt', null=True, blank=True)
     geb_datum = models.DateField(verbose_name='Geburtsdatum', null=True, blank=True)
     bw_eintritt = models.DateField(verbose_name='Bergwacht-Eintritt', null=True, blank=True)
+    status = models.CharField(max_length=3, choices=STATUS_CHOICES, default='Anwaerter')
 
     class Meta:
         verbose_name_plural = 'Mitglieder'
 
     def __str__(self):
         return self.user.last_name + ', ' + self.user.first_name
+
+    def getAnwaerter(self):
+        return Mitglied.objects.filter(status='ANW')
+
+    def getAEK(self):
+        return Mitglied.objects.filter(status='AEK')
 
 
 class Dienstgebiet(models.Model):
@@ -80,8 +92,14 @@ class nimmtTeilanDienst(models.Model):
     mitglied = models.ForeignKey(Mitglied, on_delete=models.CASCADE)
     von = models.DateTimeField(verbose_name='Von')
     bis = models.DateTimeField(verbose_name='Bis')
-    funktion = models.CharField(max_length=40, null=True)
-    kommentar = models.TextField(verbose_name='Kommentar', max_length=200)
+    funktion = models.CharField(max_length=40, null=True, blank=True)
+    kommentar = models.TextField(verbose_name='Kommentar', max_length=200, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'Dienstteilnahme'
+
+    def __str__(self):
+        return str(self.dienstnummer) + ' - ' + self.mitglied.user.last_name + '.' + self.mitglied.user.first_name
 
 
 @receiver(post_save, sender=User)

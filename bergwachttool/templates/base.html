@@ -1,0 +1,50 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'dienstplan/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'dienstplan/bootstrap-theme.css' %}">
+<link rel="stylesheet" href="{% static 'dienstplan/addition.css' %}">
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>{% block title %}Bergwacht Tool{% endblock %}</title>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="collapsed navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">Bergwacht München</a></div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Start</a></li>
+                        <li><a href="/dienstplan/">Dienstplan</a></li>
+                    </ul>
+                    <p class="navbar-text navbar-right">
+                        {% if user.is_authenticated %}
+                        Angemeldet als {{request.user.first_name}}
+                        {{request.user.last_name}} - <a href="/logout/">Logout</a>
+                        {% else %}
+                        <a href="/login/">Login</a>
+                        {% endif %}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body>
+<h1>Bergwacht Tool</h1>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

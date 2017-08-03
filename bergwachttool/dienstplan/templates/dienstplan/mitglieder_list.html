@@ -1,25 +1,31 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'dienstplan/style.css' %}"/>
-<h1>Mitgliederliste</h1>
+{% extends 'base.html' %}
+
 {% if mitglieder_list %}
-<table>
+{% block title %} Mitgliederliste {% endblock %}
+
+{% block content %}
+<h2>Mitgliederliste</h2>
+<div class="table-responsive">
+    <table class="table">
     <tr>
         <th>Name</th>
+        <th>Status</th>
         <th>Geburtsdatum</th>
         <th>Handynummer</th>
         <th>E-Mail</th>
-        <th>Admin</th>
     </tr>
     {% for mitglied in mitglieder_list %}
     <tr>
         <td>{{ mitglied.user.last_name }}, {{ mitglied.user.first_name }}</td>
+        <td>{{ mitglied.get_status_display }}</td>
         <td>{{ mitglied.geb_datum }}</td>
         <td>{{ mitglied.handy }}</td>
         <td><a href="mailto:{{ mitglied.user.email }}">{{ mitglied.user.email }}</a></td>
-        <td>{{ mitglied.user.isAdmin }}</td>
     </tr>
     {% endfor %}
 </table>
+</div>
+{% endblock %}
 {% else %}
 <p>Keine Mitglieder angelegt!</p>
 {% endif %}
