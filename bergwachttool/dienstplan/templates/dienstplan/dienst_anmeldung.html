@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load bootstrap3 %}
 
 {% block title %} Anmeldung zum Dienst Nr. {{ dienst.dienstnummer }} {% endblock %}
 {% if dienst %}
@@ -6,11 +7,37 @@
 {% block content %}
 <h2>Anmeldung zum Dienst Nr. {{ dienst.dienstnummer }}</h2>
 
-<form method="POST" class="nimmtTeilanDienst-form">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="save btn btn-primary">Anmelden</button>
-</form>
+<div id="content" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {% bootstrap_form_errors form %}
+
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                {% bootstrap_field form.von %}
+                {% bootstrap_field form.bis %}
+                {% bootstrap_field form.funktion %}
+                {% bootstrap_field form.kommentar %}
+            </div>
+        </div>
+
+        <button type="submit" class="save btn btn-primary">Anmelden</button>
+    </form>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.datetime').parent().datetimepicker({ locale: '{{ LANGUAGE_CODE }}',
+                format: 'YYYY-MM-DD HH:mm'
+            });
+        });
+
+
+    </script>
+
+</div>
+
+{{ error_message }}
 
 {% endblock %}
 

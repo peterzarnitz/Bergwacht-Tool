@@ -1,7 +1,17 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'dienstplan/bootstrap.css' %}">
-<link rel="stylesheet" href="{% static 'dienstplan/bootstrap-theme.css' %}">
-<link rel="stylesheet" href="{% static 'dienstplan/addition.css' %}">
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap/css/addition.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-datetimepicker.css' %}">
+<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'bootstrap/js/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap-datetimepicker.js' %}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
 
 
 <!DOCTYPE html>
@@ -19,11 +29,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="/" class="navbar-brand">Bergwacht München</a></div>
+                    <a href="/" class="navbar-brand"><img src="{% static 'img/Logo-253.png' %}" alt="BW München"
+                                                          height="23px"></a>
+                    <a href="/" class="navbar-brand">Bergwacht München</a>
+                </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Start</a></li>
-                        <li><a href="/dienstplan/">Dienstplan</a></li>
+                        <li><a href="/dienstplan/dienst_overview">Dienstplan</a></li>
+                        <li><a href="/dienstplan/mitglieder_overview">Mitglieder</a></li>
                     </ul>
                     <p class="navbar-text navbar-right">
                         {% if user.is_authenticated %}
@@ -41,9 +54,8 @@
 </head>
 
 <body>
-<h1>Bergwacht Tool</h1>
 
-<div id="content">
+<div id="content" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     {% block content %}{% endblock %}
 </div>
 </body>

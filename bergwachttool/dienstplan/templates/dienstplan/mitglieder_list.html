@@ -16,7 +16,8 @@
     </tr>
     {% for mitglied in mitglieder_list %}
     <tr>
-        <td>{{ mitglied.user.last_name }}, {{ mitglied.user.first_name }}</td>
+        <td><a href="{% url 'dienstplan:mitglied_detail' mitglied.user.username %}">{{ mitglied.user.last_name }}, {{
+            mitglied.user.first_name }}</a></td>
         <td>{{ mitglied.get_status_display }}</td>
         <td>{{ mitglied.geb_datum }}</td>
         <td>{{ mitglied.handy }}</td>

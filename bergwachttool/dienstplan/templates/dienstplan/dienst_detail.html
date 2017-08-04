@@ -5,33 +5,57 @@
 
 {% block content %}
 <h2>Dienstplan - Eintrag Nr. {{ dienst.dienstnummer }}</h2>
-<ul>
-    <li>Dienstgebiet: {{ dienst.dienstgebiet.name }}</li>
-    <li>Dienstbeginn: {{ dienst.dienstbeginn }}</li>
-    <li>Dienstende: {{ dienst.dienstende }}</li>
-    <li>Dienstart: {{ dienst.art.name }}</li>
-    <li>Mitglieder:
-        <table class="table">
-            <tr>
-                <th>Name</th>
-                <th>Status</th>
-                <th>Funktion</th>
-                <th>Von - Bis</th>
-                <th>Bemerkung</th>
-            </tr>
-            {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
-            <tr>
-                <td>{{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}</td>
-                <td>{{ nimmtTeil.mitglied.get_status_display }}</td>
-                <td>{{ nimmtTeil.funktion }}</td>
-                <td>{{ nimmtTeil.von }} - {{ nimmtTeil.bis }}</td>
-                <td>{{ nimmtTeil.kommentar }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-    </li>
-    <li>Bemerkung: {{ dienst.bemerkung }}</li>
-</ul>
+<table class="table">
+    <tr>
+        <td><b>Dienstgebiet</b></td>
+        <td>{{ dienst.dienstgebiet.name }}</td>
+    </tr>
+    <tr>
+        <td><b>Dienstbeginn</b></td>
+        <td>{{ dienst.dienstbeginn }}</td>
+    </tr>
+    <tr>
+        <td><b>Dienstende</b></td>
+        <td>{{ dienst.dienstende }}</td>
+    </tr>
+    <tr>
+        <td><b>Dienstart</b></td>
+        <td>{{ dienst.art.name }}</td>
+    </tr>
+    <tr>
+        <td><b>Fahrzeug</b></td>
+        <td>{{ dienst.fahrzeug.bezeichnung }}</td>
+    </tr>
+    <tr>
+        <td><b>Teilnehmer</b></td>
+        <td>
+
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Funktion</th>
+                    <th>Von - Bis</th>
+                    <th>Bemerkung</th>
+                </tr>
+                {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
+                <tr>
+                    <td>{{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}</td>
+                    <td>{{ nimmtTeil.mitglied.get_status_display }}</td>
+                    <td>{{ nimmtTeil.get_funktion_display }}</td>
+                    <td>{{ nimmtTeil.von }} - {{ nimmtTeil.bis }}</td>
+                    <td>{{ nimmtTeil.kommentar }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td><b>Bemerkung</b></td>
+        <td>{{ dienst.bemerkung }}</td>
+    </tr>
+</table>
 {% endblock %}
 {% else %}
 <p>Dienst nicht hinterlegt!</p>

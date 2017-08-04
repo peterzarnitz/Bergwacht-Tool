@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% if mitglied %}
+{% block title %} {{ mitglied.user.first_name }} {{ mitglied.user.last_name }} {% endblock %}
+
+{% block content %}
+<h2>{{ mitglied.user.first_name }} {{ mitglied.user.last_name }}</h2>
+works
+</table>
+{% endblock %}
+{% else %}
+<p>Mitglied nicht hinterlegt!</p>
+{% endif %}

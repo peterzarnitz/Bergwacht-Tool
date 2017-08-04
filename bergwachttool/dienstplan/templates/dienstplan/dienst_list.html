@@ -8,41 +8,80 @@
 <h2>Dienstplan</h2>
 <div class="table-responsive">
     <table class="table">
-    <tr>
-        <th>Nr.</th>
-        <th>Gebiet</th>
-        <th>Beginn</th>
-        <th>Ende</th>
-        <th>Art</th>
-        <th>Einsatzkräfte</th>
-        <th>Anwärter</th>
-        <th>Anmeldung</th>
-    </tr>
-    {% for dienst in dienst_list %}
-    <tr>
-        <td><a href="{% url 'dienstplan:dienst_detail' dienst.dienstnummer %}">{{ dienst.dienstnummer }}</a></td>
-        <td>{{ dienst.dienstgebiet.name }}</td>
-        <td>{{ dienst.dienstbeginn }}</td>
-        <td>{{ dienst.dienstende }}</td>
-        <td>{{ dienst.art.name }}</td>
-        <td> {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
-            {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAEK %}
-            {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }} ({{ nimmtTeil.funktion }})
-            <br>
-            {% endif %}
-            {% endfor %}
-        </td>
-        <td> {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
-            {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAnwaerter %}
-            {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }} ({{ nimmtTeil.funktion }})
-            <br>
-            {% endif %}
-            {% endfor %}
-        </td>
-        <td><a href="{% url 'dienstplan:dienst_anmeldung' dienst.dienstnummer %}" class="btn btn-primary" role="button">Anmelden</a>
-    </tr>
-    {% endfor %}
-</table>
+        <tr>
+            <th>Nr.</th>
+            <th>Gebiet</th>
+            <th>Beginn</th>
+            <th>Ende</th>
+            <th>Art</th>
+            <th># AEK</th>
+            <th>Einsatzkräfte</th>
+            <th>Anwärter</th>
+            <th>Anmeldung</th>
+            <th>Mail</th>
+        </tr>
+        {% for dienst in dienst_list %}
+        <tr>
+            <td><a href="{% url 'dienstplan:dienst_detail' dienst.dienstnummer %}" class="btn btn-default"
+                   role="button">{{ dienst.dienstnummer }}</a></td>
+            <td>{{ dienst.dienstgebiet.name }}</td>
+            <td>{{ dienst.dienstbeginn }}</td>
+            <td>{{ dienst.dienstende }}</td>
+            <td>{{ dienst.art.name }}</td>
+            <td>
+                <div class="progress">
+                    {% if dienst.getAEKcount == 0 %}
+                    <div class="progress-bar progress-bar progress-bar-danger" role="progressbar"
+                         aria-valuenow="{{ dienst.getAEKcount }}*100%/{{ dienst.minaek }}" aria-valuemin="0"
+                         aria-valuemax="100" style="min-width: 2em; width: 0%;">
+                        0/{{ dienst.minaek }}
+                    </div>
+                    {% elif dienst.getAEKcount >= dienst.minaek %}
+                    <div class="progress-bar progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="100%" aria-valuemin="0"
+                         aria-valuemax="100" style="min-width: 2em; width: 100%;">
+                        {{ dienst.getAEKcount }}/{{ dienst.minaek }}
+                    </div>
+                    {% else %}
+                    <div class="progress-bar" role="progressbar"
+                         aria-valuenow="{{ dienst.getAEKcount }}*100%/{{ dienst.minaek }}" aria-valuemin="0"
+                         aria-valuemax="100"
+                         style="min-width: 2em; width: calc({{ dienst.getAEKcount }}*100%/{{ dienst.minaek }});">
+                        {{ dienst.getAEKcount }}/{{ dienst.minaek }}
+                    </div>
+                    {% endif %}
+                </div>
+            </td>
+            <td>{% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
+                {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAEK %}
+                {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}
+                {% if nimmtTeil.funktion != None %} ({{ nimmtTeil.get_funktion_display }}) {% endif %}
+                <br>
+                {% endif %}
+                {% endfor %}
+            </td>
+            <td> {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
+                {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAnwaerter %}
+                {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}
+                {% if nimmtTeil.funktion != None %} ({{ nimmtTeil.get_funktion_display }}) {% endif %}
+                <br>
+                {% endif %}
+                {% endfor %}
+            </td>
+            <td>
+                {% if current_mitglied in dienst.mitglieder.all %}
+                <a href="{% url 'dienstplan:dienst_abmeldung' dienst.dienstnummer current_mitglied.user.username %}"
+                   class="btn btn-danger"
+                   role="button">Abmelden</a>
+                {% else %}
+                <a href="{% url 'dienstplan:dienst_anmeldung' dienst.dienstnummer %}" class="btn btn-primary"
+                   role="button">Anmelden</a>
+                {% endif %}
+            <td>
+                <button class="btn btn-success">Mail</button>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
 {% endblock %}
 {% else %}

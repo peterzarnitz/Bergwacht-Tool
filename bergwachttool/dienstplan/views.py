@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 from django.template import loader
 
 from .forms import DienstTeilnahmeForm
-from .models import Dienst, Mitglied
+from .models import Dienst, Mitglied, User, nimmtTeilanDienst
 
 
 @login_required
@@ -19,11 +19,8 @@ def index(request):
 @login_required
 def dienst_list(request):
     dienst_list = Dienst.objects.order_by('dienstbeginn')
-    template = loader.get_template('dienstplan/dienst_list.html')
-    context = {
-        'dienst_list': dienst_list,
-    }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'dienstplan/dienst_list.html',
+                  {'dienst_list': dienst_list, 'current_mitglied': Mitglied.objects.get(user=request.user)})
 
 
 @login_required
@@ -42,17 +39,26 @@ def dienst_anmeldung(request, dienstnummer):
     except Dienst.DoesNotExist:
         raise Http404("Dienst existiert nicht")
 
+    error_message = ''
     if request.method == "POST":
         form = DienstTeilnahmeForm(request.POST)
         if form.is_valid():
             anmeldung = form.save(commit=False)
             anmeldung.mitglied = Mitglied.objects.get(user=request.user)
             anmeldung.dienstnummer = dienst
-            anmeldung.save()
-            return redirect('dienst_detail', dienstnummer=dienstnummer)
+            if anmeldung.von < anmeldung.bis and anmeldung.mitglied != dienst.mitglieder.all:
+                if anmeldung.von >= dienst.dienstbeginn or anmeldung.bis <= dienst.dienstende:
+                    anmeldung.save()
+                    return redirect('dienstplan:dienst_detail', dienstnummer=dienstnummer)
+                else:
+                    error_message = 'Anmeldezeitraum muss innerhalb des Dienstzeitraums liegen'
+            else:
+                error_message = 'Abmeldezeit muss nach Anmeldezeit liegen'
+
     else:
         form = DienstTeilnahmeForm()
-    return render(request, 'dienstplan/dienst_anmeldung.html', {'form': form, 'dienst': dienst})
+    return render(request, 'dienstplan/dienst_anmeldung.html',
+                  {'form': form, 'dienst': dienst, 'error_message': error_message})
 
 
 @login_required
@@ -64,3 +70,22 @@ def mitglieder_overview(request):
         'mitglieder_list': mitglieder_list,
     }
     return HttpResponse(template.render(context, request))
+
+
+@login_required
+def mitglied_detail(request, username):
+    try:
+        user = User.objects.get(username=username)
+        mitglied = Mitglied.objects.get(user=user)
+    except Mitglied.DoesNotExist:
+        raise Http404("Mitglied existiert nicht")
+    return render(request, 'dienstplan/mitglied_detail.html', {'mitglied': mitglied})
+
+
+@login_required
+def dienst_abmeldung(request, dienstnummer, username):
+    user = User.objects.get(username=username)
+    mitglied = Mitglied.objects.get(user=user)
+    dienst = Dienst.objects.get(dienstnummer=dienstnummer)
+    nimmtTeilanDienst.objects.get(dienstnummer=dienstnummer, mitglied=mitglied).delete()
+    return dienst_list(request)

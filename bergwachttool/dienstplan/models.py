@@ -11,6 +11,11 @@ STATUS_CHOICES = (
     ('ANW', 'Anwaerter'),
     ('NEK', 'Nicht-aktive Einsatzkraft'),
 )
+FUNKTION_CHOICES = (
+    ('FAR', 'Fahrer'),
+    ('DVL', 'Dienstverantwortlicher'),
+)
+
 
 class Mitglied(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -26,7 +31,7 @@ class Mitglied(models.Model):
         verbose_name_plural = 'Mitglieder'
 
     def __str__(self):
-        return self.user.last_name + ', ' + self.user.first_name
+        return self.user.username
 
     def getAnwaerter(self):
         return Mitglied.objects.filter(status='ANW')
@@ -79,9 +84,13 @@ class Dienst(models.Model):
     mitglieder = models.ManyToManyField(Mitglied, through='nimmtTeilanDienst',
                                         through_fields=('dienstnummer', 'mitglied'), )
     fahrzeug = models.ForeignKey(Fahrzeug, on_delete=models.CASCADE, null=True, blank=True)
+    minaek = models.IntegerField(verbose_name='Geforderte AEK', blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'Dienste'
+
+    def getAEKcount(self):
+        return self.mitglieder.filter(status='AEK').count()
 
     def __str__(self):
         return str(self.dienstnummer)
@@ -92,7 +101,7 @@ class nimmtTeilanDienst(models.Model):
     mitglied = models.ForeignKey(Mitglied, on_delete=models.CASCADE)
     von = models.DateTimeField(verbose_name='Von')
     bis = models.DateTimeField(verbose_name='Bis')
-    funktion = models.CharField(max_length=40, null=True, blank=True)
+    funktion = models.CharField(max_length=3, null=True, blank=True, choices=FUNKTION_CHOICES)
     kommentar = models.TextField(verbose_name='Kommentar', max_length=200, blank=True)
 
     class Meta:
