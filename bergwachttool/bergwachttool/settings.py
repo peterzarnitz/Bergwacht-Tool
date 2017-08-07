@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'bootstrap3',
     'bootstrap3_datetime',
-    'dienstplan.apps.DienstplanConfig',
+    'dienstplan',
+    'ausbildung',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

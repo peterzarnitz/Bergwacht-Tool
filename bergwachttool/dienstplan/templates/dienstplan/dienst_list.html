@@ -14,7 +14,7 @@
             <th>Beginn</th>
             <th>Ende</th>
             <th>Art</th>
-            <th># AEK</th>
+            <th>#AEK</th>
             <th>Einsatzkräfte</th>
             <th>Anwärter</th>
             <th>Anmeldung</th>
@@ -54,7 +54,8 @@
             </td>
             <td>{% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
                 {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAEK %}
-                {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}
+                <a href="{% url 'dienstplan:mitglied_detail' nimmtTeil.mitglied %}">
+                    {{ nimmtTeil.mitglied.user.first_name}} {{ nimmtTeil.mitglied.user.last_name }}</a>
                 {% if nimmtTeil.funktion != None %} ({{ nimmtTeil.get_funktion_display }}) {% endif %}
                 <br>
                 {% endif %}
@@ -62,7 +63,8 @@
             </td>
             <td> {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
                 {% if nimmtTeil.mitglied in nimmtTeil.mitglied.getAnwaerter %}
-                {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}
+                <a href="{% url 'dienstplan:mitglied_detail' nimmtTeil.mitglied %}">
+                    {{ nimmtTeil.mitglied.user.first_name }} {{ nimmtTeil.mitglied.user.last_name }}</a>
                 {% if nimmtTeil.funktion != None %} ({{ nimmtTeil.get_funktion_display }}) {% endif %}
                 <br>
                 {% endif %}
@@ -78,7 +80,9 @@
                    role="button">Anmelden</a>
                 {% endif %}
             <td>
-                <button class="btn btn-success">Mail</button>
+                <a href="mailto: {% for mitglied in dienst.mitglieder.all %}{{ mitglied.user.email }}, {% endfor %} "
+                   class="btn btn-success" role="button">Mail</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

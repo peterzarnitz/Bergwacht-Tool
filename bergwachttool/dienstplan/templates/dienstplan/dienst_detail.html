@@ -29,13 +29,35 @@
     <tr>
         <td><b>Teilnehmer</b></td>
         <td>
-
+            <div class="progress">
+                {% if dienst.getAEKcount == 0 %}
+                <div class="progress-bar progress-bar progress-bar-danger" role="progressbar"
+                     aria-valuenow="{{ dienst.getAEKcount }}*100%/{{ dienst.minaek }}" aria-valuemin="0"
+                     aria-valuemax="100" style="min-width: 2em; width: 0%;">
+                    0/{{ dienst.minaek }}
+                </div>
+                {% elif dienst.getAEKcount >= dienst.minaek %}
+                <div class="progress-bar progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="100%" aria-valuemin="0"
+                     aria-valuemax="100" style="min-width: 2em; width: 100%;">
+                    {{ dienst.getAEKcount }}/{{ dienst.minaek }}
+                </div>
+                {% else %}
+                <div class="progress-bar" role="progressbar"
+                     aria-valuenow="{{ dienst.getAEKcount }}*100%/{{ dienst.minaek }}" aria-valuemin="0"
+                     aria-valuemax="100"
+                     style="min-width: 2em; width: calc({{ dienst.getAEKcount }}*100%/{{ dienst.minaek }});">
+                    {{ dienst.getAEKcount }}/{{ dienst.minaek }}
+                </div>
+                {% endif %}
+            </div>
             <table class="table">
                 <tr>
                     <th>Name</th>
                     <th>Status</th>
                     <th>Funktion</th>
                     <th>Von - Bis</th>
+                    <th>Handynummer</th>
                     <th>Bemerkung</th>
                 </tr>
                 {% for nimmtTeil in dienst.nimmtteilandienst_set.all %}
@@ -44,11 +66,17 @@
                     <td>{{ nimmtTeil.mitglied.get_status_display }}</td>
                     <td>{{ nimmtTeil.get_funktion_display }}</td>
                     <td>{{ nimmtTeil.von }} - {{ nimmtTeil.bis }}</td>
+                    <td>{{ nimmtTeil.mitglied.handy }}</td>
                     <td>{{ nimmtTeil.kommentar }}</td>
                 </tr>
                 {% endfor %}
             </table>
-
+            <a href="mailto: {% for mitglied in dienst.mitglieder.all %}{{ mitglied.user.email }}, {% endfor %} "
+               class="btn btn-success" role="button">Mail an alle Teilnehmer</a>
+            <a href="mailto: {% for mitglied in dienst.mitglieder.all %}{% if mitglied in mitglied.getAEK %}{{ mitglied.user.email }}, {% endif %}{% endfor %} "
+               class="btn btn-default" role="button">Mail an alle AEK</a>
+            <a href="mailto: {% for mitglied in dienst.mitglieder.all %}{% if mitglied in mitglied.getAnwaerter %}{{ mitglied.user.email }}, {% endif %}{% endfor %} "
+               class="btn btn-default" role="button">Mail an alle Anwärter</a>
         </td>
     </tr>
     <tr>

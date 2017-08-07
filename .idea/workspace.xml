@@ -2,45 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eba53be-dfc2-46ae-9c70-502b6c603e62" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/fields/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/fields/date.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap-datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/bootstrap-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/npm.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bergwachttool/bergwachttool/static/bergwachttool/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/style.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/addition.css" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/addition.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/bootstrap.css" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/static/img/Logo-253-comp.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/ausbildung_menu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bergwachttool/ausbildung/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/db.sqlite3" afterPath="$PROJECT_DIR$/bergwachttool/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Peter.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Peter.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/ausbildung/admin.py" afterPath="$PROJECT_DIR$/bergwachttool/ausbildung/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/ausbildung/models.py" afterPath="$PROJECT_DIR$/bergwachttool/ausbildung/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/ausbildung/views.py" afterPath="$PROJECT_DIR$/bergwachttool/ausbildung/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py" afterPath="$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/forms.py" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py" afterPath="$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/admin.py" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/models.py" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_anmeldung.html" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_anmeldung.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglieder_list.html" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglieder_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/urls.py" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/dienstplan/views.py" afterPath="$PROJECT_DIR$/bergwachttool/dienstplan/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/addition.css" afterPath="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/addition.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/templates/base.html" afterPath="$PROJECT_DIR$/bergwachttool/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/bergwachttool/templates/registration/logged_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bergwachttool/templates/registration/login.html" afterPath="$PROJECT_DIR$/bergwachttool/templates/registration/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,33 +35,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/forms.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#24#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="105">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dienst_anmeldung.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_anmeldung.html">
+      <file leaf-file-name="ausbildung_menu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/ausbildung_menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="50" />
+            <state relative-caret-position="60">
+              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -87,8 +70,64 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bergwachttool/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="73" lean-forward="true" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+            <state relative-caret-position="516">
+              <caret line="42" column="65" lean-forward="false" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mitglied_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="80" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="27" selection-end-column="80" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+              <folding>
+                <element signature="e#647#688#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <folding>
+                <marker date="1502028622000" expanded="true" signature="953:993" ph="'...'" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dienst_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -99,8 +138,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -110,6 +149,9 @@
       <find>navbar-brand</find>
       <find>font-fa</find>
       <find>form-</find>
+      <find>navbar</find>
+      <find>btn</find>
+      <find>bold</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,7 +171,6 @@
         <option value="$PROJECT_DIR$/bergwachttool/templates/admin/base_site.html" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/wef.html" />
         <option value="$PROJECT_DIR$/bergwachttool/templates.html" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/admin.py" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/comma.html" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/style.css" />
         <option value="$PROJECT_DIR$/bergwachttool/bergwachttool/static/bergwachttool/templates/base.html" />
@@ -138,27 +179,38 @@
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/bootstrap-theme.css" />
         <option value="$PROJECT_DIR$/bergwachttool/registration/login.html" />
-        <option value="$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/index.html" />
-        <option value="$PROJECT_DIR$/bergwachttool/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/addition.css" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglieder_list.html" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/bootstrap.css" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/urls.py" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/views.py" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/models.py" />
-        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html" />
         <option value="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/moment.js" />
         <option value="$PROJECT_DIR$/bergwachttool/static/bootstrap/js/bootstrap-datetimepicker.js" />
         <option value="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap-datetimepicker.css" />
-        <option value="$PROJECT_DIR$/bergwachttool/templates/base.html" />
-        <option value="$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/fields/date.py" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/fields/__init__.py" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/forms.py" />
         <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_anmeldung.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglieder_list.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/templates/registration/logged_out.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/templates/index.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/models.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/__init__.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/ausbildung/admin.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/admin.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/views.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/ausbildung/models.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/static/bootstrap/css/addition.css" />
+        <option value="$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/ausbildung/urls.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/templates/base.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/ausbildung_menu.html" />
+        <option value="$PROJECT_DIR$/bergwachttool/ausbildung/views.py" />
+        <option value="$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/index.html" />
       </list>
     </option>
   </component>
@@ -251,6 +303,94 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dienstplan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -273,7 +413,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fields" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dienstplan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,6 +436,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ausbildung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bergwacht-Tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bergwachttool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ausbildung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ausbildung" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,6 +494,7 @@
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -316,6 +505,7 @@
       <recent name="$PROJECT_DIR$/bergwachttool/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bergwachttool/static/img" />
       <recent name="$PROJECT_DIR$/bergwachttool/templates/bootstrap" />
       <recent name="$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan" />
       <recent name="$PROJECT_DIR$/bergwachttool/bergwachttool/static/bergwachttool/templates" />
@@ -481,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501764194854</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Anmelung und Abmeldung funktioniert">
+      <created>1501854692786</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1501854692786</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -522,7 +719,8 @@
     <MESSAGE value="Add view for Dienstplan and CSS" />
     <MESSAGE value="Dienst Detail View working" />
     <MESSAGE value="Add Login and basic registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Login and basic registration" />
+    <MESSAGE value="Anmelung und Abmeldung funktioniert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Anmelung und Abmeldung funktioniert" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -534,68 +732,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-            <marker date="1501839360000" expanded="true" signature="1342:2160" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_anmeldung.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/models.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="52" lean-forward="true" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -645,41 +777,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/style1.css" />
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/static/bootstrap/css/addition.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/registration/logged_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/static/img/Logo-253.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -700,85 +797,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglieder_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/static/dienstplan/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="2721" column="6" lean-forward="false" selection-start-line="2721" selection-start-column="1" selection-end-line="2721" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="34" column="98" lean-forward="false" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="44" column="60" lean-forward="false" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="91" column="11" lean-forward="false" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-            <marker date="1501839360000" expanded="true" signature="1342:2160" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,22 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="73" lean-forward="true" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/fields/date.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -864,18 +871,245 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="195">
           <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/static/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="4848" column="20" lean-forward="true" selection-start-line="4848" selection-start-column="2" selection-end-line="4848" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_anmeldung.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="50" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/registration/logged_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglieder_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/static/bootstrap/css/addition.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="61" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1502030248000" expanded="true" signature="1407:2225" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/dienst_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#647#688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/bergwachttool/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <marker date="1502028622000" expanded="true" signature="953:993" ph="'...'" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="42" column="65" lean-forward="false" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/dienstplan/templates/dienstplan/mitglied_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="80" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="27" selection-end-column="80" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/ausbildung_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bergwachttool/ausbildung/templates/ausbildung/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>

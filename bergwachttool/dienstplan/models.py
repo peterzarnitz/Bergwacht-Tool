@@ -29,6 +29,7 @@ class Mitglied(models.Model):
 
     class Meta:
         verbose_name_plural = 'Mitglieder'
+        ordering = ['status', 'user__last_name']
 
     def __str__(self):
         return self.user.username
@@ -38,6 +39,14 @@ class Mitglied(models.Model):
 
     def getAEK(self):
         return Mitglied.objects.filter(status='AEK')
+
+    def getAlter(self):
+        return 0  # TODO: datetime.date.today() - self.geb_datum
+
+    def getDiensteAngemeldet(self):
+        return nimmtTeilanDienst.objects.filter(mitglied=self).count()
+
+
 
 
 class Dienstgebiet(models.Model):

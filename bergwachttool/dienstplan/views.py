@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from ausbildung.models import Grundausbildung
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.http import HttpResponse
@@ -27,6 +28,7 @@ def dienst_list(request):
 def dienst_detail(request, dienstnummer):
     try:
         dienst = Dienst.objects.get(dienstnummer=dienstnummer)
+        dienst.mitglieder.order_by('status', 'user__last_name')
     except Dienst.DoesNotExist:
         raise Http404("Dienst existiert nicht")
     return render(request, 'dienstplan/dienst_detail.html', {'dienst': dienst})
@@ -77,9 +79,11 @@ def mitglied_detail(request, username):
     try:
         user = User.objects.get(username=username)
         mitglied = Mitglied.objects.get(user=user)
+        grundausbildung = Grundausbildung.objects.get(user=user)
     except Mitglied.DoesNotExist:
         raise Http404("Mitglied existiert nicht")
-    return render(request, 'dienstplan/mitglied_detail.html', {'mitglied': mitglied})
+    return render(request, 'dienstplan/mitglied_detail.html',
+                  {'mitglied': mitglied, 'grundausbildung': grundausbildung})
 
 
 @login_required

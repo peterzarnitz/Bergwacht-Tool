@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^$', TemplateView.as_view(template_name='base.html')),
     url(r'^dienstplan/', include('dienstplan.urls')),
+    url(r'^ausbildung/', include('ausbildung.urls')),
     url(r'^admin/', admin.site.urls),
 ]

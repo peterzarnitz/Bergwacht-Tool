@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from ausbildung.models import Grundausbildung
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
@@ -13,8 +14,13 @@ class ProfileInline(admin.StackedInline):
     verbose_name_plural = 'Mitglied'
 
 
+class AusbildungInline(admin.StackedInline):
+    model = Grundausbildung
+    can_delete = False
+    verbose_name_plural = 'Grundausbildung'
+
 class MitgliedUserAdmin(UserAdmin):
-    inlines = (ProfileInline,)
+    inlines = (ProfileInline, AusbildungInline,)
 
     def get_inline_instances(self, request, obj=None):
         if not obj:

@@ -5,9 +5,155 @@
 
 {% block content %}
 <h2>{{ mitglied.user.first_name }} {{ mitglied.user.last_name }}</h2>
-works
-</table>
+<div id="content" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="table-responsive">
+        <h3></h3>
+        <table class="table">
+            <tr>
+                <th>Status</th>
+                <td>{{ mitglied.get_status_display }}</td>
+            </tr>
+            <tr>
+                <th>E-Mail</th>
+                <td><a href="mailto: {{ mitglied.user.email }}">{{ mitglied.user.email }}</a></td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ mitglied.adresse_strasse }}<br>{{ mitglied.adresse_plz }} {{ mitglied.adresse_ort }}</td>
+            </tr>
+            <tr>
+                <th>Geburtstag / Alter</th>
+                <td>{{ mitglied.geb_datum }} / {{ mitglied.getAlter }}</td>
+            </tr>
+            <tr>
+                <th>Mitglied seit</th>
+                <td>{{ mitglied.bw_eintritt }}</td>
+            </tr>
+            <tr>
+                <th>Anzahl Dienste (angemeldet)</th>
+                <td>{{ mitglied.getDiensteAngemeldet }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="content" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="table-responsive">
+        <h3>Ausbildung</h3>
+        <table class="table">
+            <tr>
+                <td>Grundausbildung Winter</td>
+                <td>{% if grundausbildung.grundausbildung_winter == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Winterrrettung</td>
+                <td>{% if grundausbildung.winterrettung == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Behelfsmäßige Bergrettung</td>
+                <td>{% if grundausbildung.behelfs_bergrettung == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Planmäßige Bergrettung</td>
+                <td>{% if grundausbildung.planmae_bergrettung == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Funk</td>
+                <td>{% if grundausbildung.funk == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Akia</td>
+                <td>{% if grundausbildung.akia == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Orientierung & Kartenkunde</td>
+                <td>{% if grundausbildung.orientierung == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Naturschutz-Exkursion</td>
+                <td>{% if grundausbildung.natschutz_exkursion == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+        </table>
+        <h3>Prüfungen</h3>
+        <table class="table">
+            <tr>
+                <td>Anwärterfahrt Sommer</td>
+                <td>{% if grundausbildung.anwaerterfahrt_sommer == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Anwärterfahrt Winter</td>
+                <td>{% if grundausbildung.anwaerterfahrt_winter == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Eignungstest Sommer</td>
+                <td>{% if grundausbildung.eignungstest_sommer == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Eignungstest Winter</td>
+                <td>{% if grundausbildung.eignungstest_winter == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Prüfung Sommer</td>
+                <td>{% if grundausbildung.pruefung_sommer == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Prüfung Winter</td>
+                <td>{% if grundausbildung.pruefung_winter == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Prüfung Naturschutz</td>
+                <td>{% if grundausbildung.pruefung_natschutz == True %}
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% endif %}
+                </td>
+            </tr>
+        </table>
+        {% if request.user == mitglied.user %}
+        <a href="#" class="btn btn-primary" role="button">Daten bearbeiten</a>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
 {% else %}
 <p>Mitglied nicht hinterlegt!</p>
 {% endif %}
+
+
+grundausbildung_winter = models.BooleanField(verbose_name='Grundausbildung Winter')
+winterrettung = models.BooleanField(verbose_name='Winterrettung')
+behelfs_bergrettung = models.BooleanField(verbose_name='Behelfsmaessige Bergrettung')
+planmae_bergrettung = models.BooleanField(verbose_name='Planmaessige Bergrettung')
+
+
+eignungstest_sommer = models.BooleanField(verbose_name='Eignungstest Sommer')
+eignungstest_winter = models.BooleanField(verbose_name='Eignungstest Winter')
+pruefung_winter = models.BooleanField(verbose_name='Prüfung Winter')
+pruefung_sommer = models.BooleanField(verbose_name='Prüfung Sommer')
+pruefung_natschutz = models.BooleanField(verbose_name='Prüfung Naturschutz')

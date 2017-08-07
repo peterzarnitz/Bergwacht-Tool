@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} Ausbildung {% endblock %}
+
+{% if grundausbildungen %}
+
+{% block content %}
+<h2>Ausbildung</h2>
+<div id="content" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <h3>Fehlende Ausbildung</h3>
+    <ul>
+        <li>Grundausbildung Winter</li>
+        <li>Winterrettung</li>
+        <li>Akia</li>
+        <li>Behelfsmäßige Bergrettung</li>
+        <li>Planmäßige Bergrettung</li>
+        <li>Funk</li>
+        <li>Orientierung & Kartenkunde</li>
+        <li>Naturschutzexkursion</li>
+    </ul>
+    <h3>Fehlende Prüfung</h3>
+    <ul>
+        <li>Anwärterfahrt Winter</li>
+        ^
+        <li>Anwärterfahrt Sommer</li>
+        <li>Eignungstest Winter</li>
+        <li>Eignungstest Sommer</li>
+        <li>Prüfung Winter</li>
+        <li>Prüfung Sommer</li>
+        <li>Prüfung Naturschutz</li>
+    </ul>
+</div>
+
+
+<div id="content" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
+</div>
+{% endblock %}
+{% endif %}
+
+
+anwaerterfahrt_sommer = models.BooleanField(verbose_name='Anwaerterfahrt Sommer')
+anwaerterfahrt_winter = models.BooleanField(verbose_name='Anwaerterfahrt Winter')
+
+grundausbildung_winter = models.BooleanField(verbose_name='Grundausbildung Winter')
+winterrettung = models.BooleanField(verbose_name='Winterrettung')
+behelfs_bergrettung = models.BooleanField(verbose_name='Behelfsmaessige Bergrettung')
+planmae_bergrettung = models.BooleanField(verbose_name='Planmaessige Bergrettung')
+
+funk = models.BooleanField(verbose_name='Funk')
+akia = models.BooleanField(verbose_name='Akia')
+orientierung = models.BooleanField(verbose_name='Orientierung und Kartenkunde')
+
+natschutz_exkursion = models.BooleanField(verbose_name='Anwaerterfahrt Sommer')
+
+eignungstest_sommer = models.BooleanField(verbose_name='Eignungstest Sommer')
+eignungstest_winter = models.BooleanField(verbose_name='Eignungstest Winter')
+pruefung_winter = models.BooleanField(verbose_name='Prüfung Winter')
+pruefung_sommer = models.BooleanField(verbose_name='Prüfung Sommer')
+pruefung_natschutz = models.BooleanField(verbose_name='Prüfung Naturschutz')

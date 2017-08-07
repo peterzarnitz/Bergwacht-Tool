@@ -18,7 +18,7 @@
 <html lang="de">
 <head>
     <title>{% block title %}Bergwacht Tool{% endblock %}</title>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-bergwacht navbar-fixed-top">
         <div class="container-fluid">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -29,21 +29,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="/" class="navbar-brand"><img src="{% static 'img/Logo-253.png' %}" alt="BW München"
-                                                          height="23px"></a>
+                    <a href="/" class="navbar-brand"><img src="{% static 'img/Logo-253-comp.jpg' %}" alt="BW München"
+                                                          height="40px"></a>
                     <a href="/" class="navbar-brand">Bergwacht München</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
                     <ul class="nav navbar-nav">
-                        <li><a href="/dienstplan/dienst_overview">Dienstplan</a></li>
-                        <li><a href="/dienstplan/mitglieder_overview">Mitglieder</a></li>
+                        <li><a href="/dienstplan/dienst_overview"><span class="glyphicon glyphicon-th"
+                                                                        aria-hidden="true"></span> Dienstplan</a></li>
+                        <li><a href="/dienstplan/mitglieder_overview"><span class="glyphicon glyphicon-user"
+                                                                            aria-hidden="true"></span> Mitglieder</a>
+                        </li>
+                        <li><a href="/ausbildung/"><span class="glyphicon glyphicon-text-background"
+                                                         aria-hidden="true"></span> Ausbildung</a>
+                        </li>
                     </ul>
                     <p class="navbar-text navbar-right">
                         {% if user.is_authenticated %}
-                        Angemeldet als {{request.user.first_name}}
-                        {{request.user.last_name}} - <a href="/logout/">Logout</a>
+                        Angemeldet als <a href="{% url 'dienstplan:mitglied_detail' request.user %}">
+                        {{request.user.first_name}} {{request.user.last_name}}</a>
+                        <a href="/logout/" class="btn btn-default">Logout</a>
                         {% else %}
-                        <a href="/login/">Login</a>
+                        <a href="/login/" class="btn btn-default">Login</a>
                         {% endif %}
                     </p>
                 </div>
